@@ -19,7 +19,6 @@
 		FB9FA5EC1C24BC0200125DCF /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB9FA5E71C24BC0200125DCF /* death.wav */; };
 		FB9FA5ED1C24BC0200125DCF /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB9FA5E81C24BC0200125DCF /* heart.wav */; };
 		FB9FA5EE1C24BC0200125DCF /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB9FA5E91C24BC0200125DCF /* skull.wav */; };
-		FBBD962E1C257727003B804D /* MoleManImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBD962D1C257727003B804D /* MoleManImg.swift */; };
 		FBF0E93B1C25647100EC4812 /* whistle.wav in Resources */ = {isa = PBXBuildFile; fileRef = FBF0E93A1C25647100EC4812 /* whistle.wav */; };
 		FBF0E93D1C256E2900EC4812 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBF0E93C1C256E2900EC4812 /* Minecraft.ttf */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		FB9FA5E71C24BC0200125DCF /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
 		FB9FA5E81C24BC0200125DCF /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
 		FB9FA5E91C24BC0200125DCF /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
-		FBBD962D1C257727003B804D /* MoleManImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoleManImg.swift; sourceTree = "<group>"; };
 		FBF0E93A1C25647100EC4812 /* whistle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whistle.wav; sourceTree = "<group>"; };
 		FBF0E93C1C256E2900EC4812 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +87,6 @@
 				FB606FD51C21769100A8E9F7 /* Info.plist */,
 				FB9FA5E11C24A71200125DCF /* DragImg.swift */,
 				FB9FA5E31C24AA4700125DCF /* MonsterImg.swift */,
-				FBBD962D1C257727003B804D /* MoleManImg.swift */,
 			);
 			path = mylittlemonster;
 			sourceTree = "<group>";
@@ -172,7 +169,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBBD962E1C257727003B804D /* MoleManImg.swift in Sources */,
 				FB9FA5E41C24AA4700125DCF /* MonsterImg.swift in Sources */,
 				FB9FA5E21C24A71200125DCF /* DragImg.swift in Sources */,
 				FB606FCC1C21769100A8E9F7 /* ViewController.swift in Sources */,

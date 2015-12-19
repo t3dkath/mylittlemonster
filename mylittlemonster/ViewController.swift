@@ -11,6 +11,13 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var charChangeBtn: UIButton!
+    @IBOutlet weak var charChangeLbl: UILabel!
+    @IBOutlet weak var bgImg: UIImageView!
+    @IBOutlet weak var groundImg: UIImageView!
+    @IBOutlet weak var charSelectBtn: UIButton!
+    @IBOutlet weak var charSelectLbl: UILabel!
+    @IBOutlet weak var selectionImg: MonsterImg!
     @IBOutlet weak var monsterImg: MonsterImg!
     @IBOutlet weak var needStack: UIStackView!
     @IBOutlet weak var foodImg: DragImg!
@@ -63,7 +70,7 @@ class ViewController: UIViewController {
             try sfxWhistle = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("whistle", ofType: "wav")!))
             
             musicPlayer.prepareToPlay()
-            //musicPlayer.play()
+            musicPlayer.play()
             
             sfxBite.prepareToPlay()
             sfxHeart.prepareToPlay()
@@ -75,10 +82,28 @@ class ViewController: UIViewController {
             print(err.debugDescription)
         }
         
-        gameStart()
+        setBackgroundImages()
+        selectionImg.playWalkAnimation()
     }
     
     @IBAction func onRestartPress(sender: AnyObject) {
+        gameStart()
+    }
+    
+    
+    @IBAction func onCharacterChange(sender: AnyObject) {
+        
+        if monsterImg.assignedCharacter >= monsterImg.characters.count - 1 {
+            monsterImg.assignedCharacter = 0
+        } else {
+            monsterImg.assignedCharacter++
+        }
+        
+        setBackgroundImages()
+        selectionImg.assignedCharacter = monsterImg.assignedCharacter
+        selectionImg.playWalkAnimation()
+    }
+    @IBAction func onCharacterSelect(sender: AnyObject) {
         gameStart()
     }
     
@@ -103,12 +128,12 @@ class ViewController: UIViewController {
         }
     }
     
-    func gameSetup() {
-        
-    }
-    
     func gameStart() {
-        
+        charChangeBtn.hidden = true
+        charChangeLbl.hidden = true
+        charSelectBtn.hidden = true
+        charSelectLbl.hidden = true
+        selectionImg.hidden = true
         restartBtn.hidden = true
         restartLbl.hidden = true
         monsterImg.hidden = false
@@ -213,6 +238,16 @@ class ViewController: UIViewController {
         
         restartBtn.hidden = false
         restartLbl.hidden = false
+    }
+    
+    func setBackgroundImages() {
+        if monsterImg.assignedCharacter == 0 {
+            groundImg.image = UIImage(named: "grassyground.png")
+            bgImg.image = UIImage(named: "altbg")
+        } else {
+            groundImg.image = UIImage(named: "ground.png")
+            bgImg.image = UIImage(named: "bg.png")
+        }
     }
     
 

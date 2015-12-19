@@ -11,7 +11,9 @@ import UIKit
 
 class MonsterImg: UIImageView {
     
-    var prefix = "RockMan"
+    var characters = ["Miner", "Rockman"]
+    var assignedCharacter: Int = 0
+    var imgCharacterSet: String!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,12 +21,13 @@ class MonsterImg: UIImageView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        playIdleAnimation()
     }
     
     func playIdleAnimation() {
         playAnimation("idle", initImgNum: 1, numOfImages: 4)
+    }
+    func playWalkAnimation() {
+        playAnimation("walk", initImgNum: 1, numOfImages: 9)
     }
     func playDeathAnimation() {
         playAnimation("dead", initImgNum: 5, numOfImages: 5, repeatCount: 1)
@@ -32,13 +35,15 @@ class MonsterImg: UIImageView {
     
     func playAnimation(imgSet: String, initImgNum: Int, numOfImages: Int, repeatCount: Int = 0, aniDuration: Double = 0.8, imgExtention: String = ".png") {
         
-        self.image = UIImage(named: "\(imgSet)\(initImgNum)\(imgExtention)")
+        imgCharacterSet = "\(characters[assignedCharacter])-\(imgSet)"
+        
+        self.image = UIImage(named: "\(imgCharacterSet)\(initImgNum)\(imgExtention)")
         self.animationImages = nil
         
         var imgArray = [UIImage]()
         
         for var x = 1; x <= numOfImages; x++ {
-            let img = UIImage(named: "\(imgSet)\(x).png")
+            let img = UIImage(named: "\(imgCharacterSet)\(x).png")
             imgArray.append(img!)
         }
         

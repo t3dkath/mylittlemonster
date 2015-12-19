@@ -8,6 +8,8 @@
     <customFonts key="customFonts">
         <mutableArray key="Minecraft.ttf">
             <string>Minecraft</string>
+            <string>Minecraft</string>
+            <string>Minecraft</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -53,6 +55,7 @@
                                         <rect key="frame" x="66" y="0.0" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="4E3-eh-hEL"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="IXn-bt-UgZ"/>
                                             <constraint firstAttribute="height" constant="45" id="OYt-Rf-RiZ"/>
                                         </constraints>
                                     </imageView>
@@ -65,7 +68,64 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="dsu-UX-SEQ" customClass="MonsterImg" customModule="mylittlemonster" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ne-eL-6Zm" customClass="MonsterImg" customModule="mylittlemonster" customModuleProvider="target">
+                                <rect key="frame" x="-55" y="226" width="515" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="580" id="0qd-ym-1rO"/>
+                                    <constraint firstAttribute="height" constant="325" id="Ort-AI-UvU"/>
+                                    <constraint firstAttribute="height" constant="367" id="T13-Sm-GJx"/>
+                                    <constraint firstAttribute="width" constant="515" id="xgw-NI-Q7U"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0qd-ym-1rO"/>
+                                        <exclude reference="T13-Sm-GJx"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25n-lJ-BXh">
+                                <rect key="frame" x="131" y="91" width="167" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="c8N-bP-Gs1"/>
+                                    <constraint firstAttribute="width" constant="165" id="sVx-c4-ydj"/>
+                                </constraints>
+                                <state key="normal" image="btn1"/>
+                                <connections>
+                                    <action selector="onCharacterChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ld-dk-MMp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CHANGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9TE-zx-aW7">
+                                <rect key="frame" x="134" y="102" width="164" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9Jc-3Q-uJ0"/>
+                                    <constraint firstAttribute="width" constant="164" id="Ium-XF-dSu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bc8-v2-RVo">
+                                <rect key="frame" x="305" y="91" width="167" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="9KO-gf-vVY"/>
+                                    <constraint firstAttribute="height" constant="60" id="xic-ar-SJm"/>
+                                </constraints>
+                                <state key="normal" image="btn2"/>
+                                <connections>
+                                    <action selector="onCharacterSelect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EyD-By-5Hb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SELECT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvJ-M7-t3H">
+                                <rect key="frame" x="306" y="100" width="164" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Bx-t1-sf7"/>
+                                    <constraint firstAttribute="width" constant="164" id="2qz-vO-8mt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rockman-idle1" translatesAutoresizingMaskIntoConstraints="NO" id="dsu-UX-SEQ" customClass="MonsterImg" customModule="mylittlemonster" customModuleProvider="target">
                                 <rect key="frame" x="-35" y="226" width="515" height="325"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="325" id="8pC-2N-lUg"/>
@@ -109,18 +169,18 @@
                                 </variation>
                             </stackView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPF-P0-QMF">
-                                <rect key="frame" x="203" y="265" width="193" height="71"/>
+                                <rect key="frame" x="203" y="264.5" width="193" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="RMD-LM-OZD"/>
                                     <constraint firstAttribute="width" constant="193" id="s7Y-6E-P9s"/>
                                 </constraints>
-                                <state key="normal" image="restart-bg"/>
+                                <state key="normal" image="btn1"/>
                                 <connections>
                                     <action selector="onRestartPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qhj-p9-SJc"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESTART" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCg-0b-ATV">
-                                <rect key="frame" x="217" y="280" width="164" height="40"/>
+                                <rect key="frame" x="217" y="279.5" width="164" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="164" id="5Z6-Vc-SgX"/>
                                     <constraint firstAttribute="height" constant="40" id="iIT-p4-Ubb"/>
@@ -132,28 +192,40 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5ne-eL-6Zm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1JV-e8-Qwh"/>
                             <constraint firstAttribute="trailing" secondItem="NtC-11-Tww" secondAttribute="trailing" id="7c5-v8-EYg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t0f-Es-ucg" secondAttribute="trailing" id="9KK-cM-GOv"/>
                             <constraint firstItem="t0f-Es-ucg" firstAttribute="top" secondItem="W30-1o-a3H" secondAttribute="bottom" constant="25" id="ELf-g5-NcW"/>
                             <constraint firstItem="rCW-67-UoH" firstAttribute="centerY" secondItem="W30-1o-a3H" secondAttribute="centerY" constant="2" id="F2x-hx-Lh9"/>
                             <constraint firstItem="sPF-P0-QMF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FoN-1E-G1u"/>
+                            <constraint firstItem="5ne-eL-6Zm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-55" id="Fz9-Ll-VUk"/>
                             <constraint firstItem="NtC-11-Tww" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H5R-Vn-u1Q"/>
                             <constraint firstItem="W30-1o-a3H" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Igi-3F-Dti"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dsu-UX-SEQ" secondAttribute="bottom" constant="49" id="KV9-sB-fGx"/>
                             <constraint firstItem="PCg-0b-ATV" firstAttribute="centerX" secondItem="sPF-P0-QMF" secondAttribute="centerX" id="KqG-kt-rm0"/>
+                            <constraint firstItem="bc8-v2-RVo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="87" id="LMV-sy-swd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5ne-eL-6Zm" secondAttribute="bottom" constant="49" id="OeX-T3-Tek"/>
                             <constraint firstItem="2yG-Rg-Hkw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PUQ-C8-Kbg"/>
                             <constraint firstItem="t0f-Es-ucg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QLH-ho-NFV"/>
                             <constraint firstItem="t0f-Es-ucg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QN3-CV-dvQ"/>
                             <constraint firstItem="2yG-Rg-Hkw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QeL-PC-GTV"/>
+                            <constraint firstItem="9TE-zx-aW7" firstAttribute="centerX" secondItem="25n-lJ-BXh" secondAttribute="centerX" id="SW6-Ld-5Bf"/>
+                            <constraint firstItem="9TE-zx-aW7" firstAttribute="centerY" secondItem="25n-lJ-BXh" secondAttribute="centerY" id="TZY-gs-bCf"/>
+                            <constraint firstItem="bc8-v2-RVo" firstAttribute="centerY" secondItem="25n-lJ-BXh" secondAttribute="centerY" id="UME-cX-UqA"/>
                             <constraint firstItem="W30-1o-a3H" firstAttribute="centerX" secondItem="rCW-67-UoH" secondAttribute="centerX" constant="4" id="Vha-i3-6Ps"/>
                             <constraint firstItem="sPF-P0-QMF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vyb-sm-Y0d"/>
+                            <constraint firstItem="25n-lJ-BXh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-87" id="Ytz-hf-Cnb"/>
                             <constraint firstItem="t0f-Es-ucg" firstAttribute="top" secondItem="W30-1o-a3H" secondAttribute="bottom" constant="25" id="ZKH-GQ-l9N"/>
                             <constraint firstAttribute="trailing" secondItem="2yG-Rg-Hkw" secondAttribute="trailing" id="ZQG-7A-HpG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NtC-11-Tww" secondAttribute="bottom" id="czL-eo-U3j"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2yG-Rg-Hkw" secondAttribute="bottom" id="dFf-2R-cuk"/>
                             <constraint firstItem="dsu-UX-SEQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-55" id="fRm-GR-jpy"/>
+                            <constraint firstItem="25n-lJ-BXh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="hPe-df-GES"/>
                             <constraint firstItem="W30-1o-a3H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhG-F4-dIN"/>
+                            <constraint firstItem="jvJ-M7-t3H" firstAttribute="centerX" secondItem="bc8-v2-RVo" secondAttribute="centerX" id="oRI-I9-XQA"/>
+                            <constraint firstItem="bc8-v2-RVo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="rbn-h1-gOw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dsu-UX-SEQ" secondAttribute="bottom" constant="37" id="sOr-hZ-IgO"/>
+                            <constraint firstItem="jvJ-M7-t3H" firstAttribute="centerY" secondItem="bc8-v2-RVo" secondAttribute="centerY" id="tdZ-p0-RTV"/>
                             <constraint firstItem="PCg-0b-ATV" firstAttribute="centerY" secondItem="sPF-P0-QMF" secondAttribute="centerY" id="uWs-Aq-jnM"/>
                             <constraint firstItem="t0f-Es-ucg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ufL-4T-lkP"/>
                             <constraint firstItem="t0f-Es-ucg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vug-vE-8bF"/>
@@ -165,6 +237,8 @@
                                 <exclude reference="QLH-ho-NFV"/>
                                 <exclude reference="QN3-CV-dvQ"/>
                                 <exclude reference="ufL-4T-lkP"/>
+                                <exclude reference="1JV-e8-Qwh"/>
+                                <exclude reference="rbn-h1-gOw"/>
                                 <exclude reference="sOr-hZ-IgO"/>
                             </mask>
                         </variation>
@@ -182,7 +256,13 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="bgImg" destination="2yG-Rg-Hkw" id="Bho-Me-bfn"/>
+                        <outlet property="charChangeBtn" destination="25n-lJ-BXh" id="Abp-Tp-6xt"/>
+                        <outlet property="charChangeLbl" destination="9TE-zx-aW7" id="Md1-ZO-0vR"/>
+                        <outlet property="charSelectBtn" destination="bc8-v2-RVo" id="rCx-1Q-xl6"/>
+                        <outlet property="charSelectLbl" destination="jvJ-M7-t3H" id="Mio-g8-WTc"/>
                         <outlet property="foodImg" destination="fns-wJ-XXV" id="V7J-F5-dCi"/>
+                        <outlet property="groundImg" destination="NtC-11-Tww" id="pcf-be-cRR"/>
                         <outlet property="heartImg" destination="8gC-r7-Sbh" id="itt-gP-DvX"/>
                         <outlet property="livesPanelImg" destination="W30-1o-a3H" id="gC6-2C-3TL"/>
                         <outlet property="monsterImg" destination="dsu-UX-SEQ" id="1zS-YI-OCq"/>
@@ -193,6 +273,7 @@
                         <outlet property="penalty3Img" destination="xHZ-KL-7uD" id="QkT-X6-xxJ"/>
                         <outlet property="restartBtn" destination="sPF-P0-QMF" id="du7-w5-Zke"/>
                         <outlet property="restartLbl" destination="PCg-0b-ATV" id="jG0-d2-U7F"/>
+                        <outlet property="selectionImg" destination="5ne-eL-6Zm" id="gQb-GN-mG8"/>
                         <outlet property="whistleImg" destination="sFU-6q-qjP" id="QaB-YD-O3s"/>
                     </connections>
                 </viewController>
@@ -202,13 +283,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Rockman-idle1" width="889" height="615"/>
         <image name="bg" width="768" height="1024"/>
+        <image name="btn1" width="212" height="78"/>
+        <image name="btn2" width="212" height="78"/>
         <image name="food" width="95" height="98"/>
         <image name="ground" width="1444" height="151"/>
         <image name="heart" width="95" height="98"/>
-        <image name="idle1" width="889" height="615"/>
         <image name="livespanel" width="468" height="137"/>
-        <image name="restart-bg" width="212" height="78"/>
         <image name="skull" width="95" height="98"/>
         <image name="whistle" width="95" height="98"/>
     </resources>
